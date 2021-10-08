@@ -1,0 +1,163 @@
+body {
+  background-color: rgb(194, 218, 235);
+}
+
+#page-heading {
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+form {
+  margin-top: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form button {
+  height: 30px;
+}
+
+form div span {
+  transition: 1s;
+  margin: 5px 5px;
+  position: absolute;
+}
+
+form div input:focus ~ span,
+form div textarea:focus ~ span {
+  transform: translate(-15px, -30px);
+}
+
+form div input:valid ~ span,
+form div textarea:valid ~ span {
+  transform: translate(-15px, -30px);
+}
+
+form input,
+form textarea {
+  border-radius: 5px;
+  border: 0;
+  background-color: rgba(253, 253, 253);
+  width: 80%;
+  height: 30px;
+  border-bottom: 1px solid black;
+  resize: vertical;
+}
+
+form div {
+  width: 30%;
+  display: flex;
+  text-align: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0px 8px;
+  margin-top: 42px;
+  width: 80%;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+thead {
+  background: linear-gradient(to right, #ee76b0, #f3a268);
+}
+
+#err_msg {
+  color: red;
+  text-align: center;
+}
+
+.task-table-div {
+  display: flex;
+  justify-content: center;
+}
+
+table tbody td {
+  padding: 15px;
+}
+
+table tbody tr {
+  transition: 0.3s;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+thead {
+  background-color: transparent;
+}
+
+thead th {
+  padding: 10px;
+}
+
+#add-task-btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  transition: 1s;
+}
+
+#add-task-btn:hover {
+  box-shadow: 0px 0px 15px 2px black;
+  color: white;
+}
+
+tbody tr:hover {
+  cursor: default;
+  background-color: rgba(0, 183, 255, 0.4);
+  transform: scale(1.03);
+}
+
+.dlt-btn {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #page-heading {
+    font-size: 34px;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  form div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+  }
+  table {
+    width: 100%;
+  }
+  #add-task-btn {
+    margin-top: 10px;
+  }
+
+  table tbody td {
+    padding: 10px;
+  }
+  form div input:focus ~ span,
+  form div textarea:focus ~ span {
+    transform: translate(0px, -30px);
+  }
+
+  form div input:valid ~ span,
+  form div textarea:valid ~ span {
+    transform: translate(0px, -30px);
+  }
+}
